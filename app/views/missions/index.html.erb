@@ -1,14 +1,30 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Missions</h1>
-
 <div id="missions">
-  <% @missions.each do |mission| %>
-    <%= render mission %>
-    <p>
-      <%= link_to "Show this mission", mission %>
-    </p>
-  <% end %>
+<table class="table table-hover">
+
+  <thead class="thead-dark">
+    <tr>
+      <th>Mission</th>
+      <th>Description</th>
+      <th>Manufacturer</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @missions.each do |mission| %>
+    <tr>
+        <td><%= mission.title %></td>
+        <td><%= mission.description %></td>
+        <td><%= mission.manufacturer %></td>
+        <td><%= mission.website %></td>
+    </tr>
+<%end%>
+  </tbody>
+
+</table>
+
 </div>
 
 <%= link_to "New mission", new_mission_path %>

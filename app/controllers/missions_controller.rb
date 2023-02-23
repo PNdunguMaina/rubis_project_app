@@ -65,6 +65,6 @@ class MissionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mission_params
-      params.fetch(:mission, {})
+      params.require(:mission).permit(:title, :description, :website, :manufacturer)
     end
 end
