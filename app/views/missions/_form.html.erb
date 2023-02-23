@@ -10,27 +10,29 @@
       </ul>
     </div>
   <% end %>
-<div>
-    <%= form.label :Title %>
-    <%= form.text_area :title %>
-  </div>
+  <div class="container my-5">
+    <div class="field form-group">
+      <%= form.label :Title, class:"col-sm-2 col-form-label" %>
+      <%= form.text_field :title, class:"form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :Description %>
-    <%= form.text_area :description %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :Manufacturer, class:"col-sm-2 col-form-label" %>
+      <%= form.text_field :manufacturer, class:"form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :Manufacturer %>
-    <%= form.text_area :manufacturer %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :website, class:"col-sm-2 col-form-label" %>
+      <%= form.text_field :website, class:"form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :website %>
-    <%= form.text_area :website %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :Description, class:"col-sm-2 col-form-label" %>
+      <%= form.text_area :description, class:"form-control", rows:"5" %>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div class="mt-5 d-flex justify-content-center">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
