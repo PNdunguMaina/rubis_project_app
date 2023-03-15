@@ -8,7 +8,7 @@ development:
   database: rubis_project_app_development
   username: postgres
   password: 1234
-  host: localhost
+  host: dockerize_rubis_app-db-1
   port: 5432
 
 test:
